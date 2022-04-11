@@ -17,7 +17,6 @@ namespace CalculatorMVVM.ViewModels
         public SubtractCommand SubtractCommand { get; set; }
         public MultiplyCommand MultiplyCommand { get; set; }
         public DivideCommand DivideCommand { get; set; }
-
         public ClearCommand ClearCommand { get; set; }
 
         public CalculatorViewModel(ICalculatorOperations operationsService = null)
@@ -100,7 +99,7 @@ namespace CalculatorMVVM.ViewModels
 
         public void Clear()
         {
-            Result = _operationsService.Clear(0,0);
+            Result = _operationsService.Clear(Num1, Num2);
         }
 
     }
