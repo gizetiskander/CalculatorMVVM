@@ -17,6 +17,15 @@ namespace CalculatorMVVM.Views
         {
             InitializeComponent();
             BindingContext = new CalculatorViewModel();
+            Divide.Clicked += AlertButton_Clicked; 
+        }
+
+        private void AlertButton_Clicked(object sender, EventArgs e)
+        {
+            if(Num2.Text == "0")
+            {
+                DisplayAlert("Уведомление", "Делить на ноль нельзя!", "ОK");
+            }
         }
     }
 }

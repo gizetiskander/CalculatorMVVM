@@ -10,6 +10,10 @@ namespace CalculatorMVVM.Operations
 
         public int Divide(int num1, int num2)
         {
+            if(num2 == 0)
+            {
+                throw new DivideByZeroException("Делить на ноль нельзя!");
+            }
             return num1 / num2;
         }
 

@@ -4,16 +4,16 @@
              x:Class="CalculatorMVVM.Views.CalculatorPage" Title="Калькулятор">
     <ContentPage.Content>
         <StackLayout Margin="20">
-            <Entry Keyboard="Numeric" Placeholder="Первое число"  Text="{Binding Num1, Mode=TwoWay}" />
-            <Entry Keyboard="Numeric" Placeholder="Второе число" Text="{Binding Num2, Mode=TwoWay}" />
+            <Entry x:Name="Num1" Keyboard="Numeric" Placeholder="Первое число"  Text="{Binding Num1, Mode=TwoWay}" />
+            <Entry x:Name="Num2" Keyboard="Numeric" Placeholder="Второе число" Text="{Binding Num2, Mode=TwoWay}" />
 
 
-            <Button Text="+" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding AddCommand}"></Button>
-            <Button Text="-" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding SubtractCommand}"></Button>
-            <Button Text="*" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding MultiplyCommand}"></Button>
-            <Button Text="/" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding DivideCommand}"></Button>
-            <Button Text="C" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding ClearCommand}"></Button>
-            
+            <Button x:Name="Add" Text="+" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding AddCommand}"/>
+            <Button x:Name="Subtract" Text="-" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding SubtractCommand}"/>
+            <Button x:Name="Multiply" Text="*" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding MultiplyCommand}"/>
+            <Button x:Name="Divide" Text="/" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding DivideCommand}"/>
+            <Button x:Name="Clear" Text="C" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding ClearCommand}"/>
+
 
             <Label FontSize="Large" Text="{Binding Result, Mode=TwoWay}"/>
         </StackLayout>

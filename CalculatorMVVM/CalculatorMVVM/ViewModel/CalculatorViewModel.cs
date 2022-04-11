@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.ComponentModel;
 using CalculatorMVVM.Commands;
 using CalculatorMVVM.Models;
@@ -94,7 +95,14 @@ namespace CalculatorMVVM.ViewModels
         }
         public void Divide()
         {
-            Result = _operationsService.Divide(Num1, Num2);
+            try
+            {
+                Result = _operationsService.Divide(Num1, Num2);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         public void Clear()

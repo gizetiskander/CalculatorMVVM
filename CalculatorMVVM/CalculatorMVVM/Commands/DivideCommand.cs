@@ -13,7 +13,7 @@ namespace CalculatorMVVM.Commands
         {
             _calculatorViewModel = calculatorViewModel;
         }
-
+        
         public event EventHandler CanExecuteChanged;
 
         public bool CanExecute(object parameter)
