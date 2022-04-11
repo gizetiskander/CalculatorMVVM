@@ -18,6 +18,8 @@ namespace CalculatorMVVM.ViewModels
         public MultiplyCommand MultiplyCommand { get; set; }
         public DivideCommand DivideCommand { get; set; }
 
+        public ClearCommand ClearCommand { get; set; }
+
         public CalculatorViewModel(ICalculatorOperations operationsService = null)
         {
             Calculator = new CalculatorModel();
@@ -27,6 +29,7 @@ namespace CalculatorMVVM.ViewModels
             SubtractCommand = new SubtractCommand(this);
             MultiplyCommand = new MultiplyCommand(this);
             DivideCommand = new DivideCommand(this);
+            ClearCommand = new ClearCommand(this);
         }
 
 
@@ -93,6 +96,11 @@ namespace CalculatorMVVM.ViewModels
         public void Divide()
         {
             Result = _operationsService.Divide(Num1, Num2);
+        }
+
+        public void Clear()
+        {
+            Result = _operationsService.Clear(0,0);
         }
 
     }

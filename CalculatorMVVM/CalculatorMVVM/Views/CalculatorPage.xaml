@@ -12,7 +12,7 @@
             <Button Text="-" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding SubtractCommand}"></Button>
             <Button Text="*" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding MultiplyCommand}"></Button>
             <Button Text="/" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding DivideCommand}"></Button>
-            <Button Text="CE" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding DivideCommand}"></Button>
+            <Button Text="C" BorderColor="Black" BorderWidth="2" BackgroundColor="White" Command="{Binding ClearCommand}"></Button>
             
 
             <Label FontSize="Large" Text="{Binding Result, Mode=TwoWay}"/>

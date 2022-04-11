@@ -22,5 +22,10 @@ namespace CalculatorMVVM.Operations
         {
             return num1 - num2;
         }
+
+        public int Clear(int num1, int num2)
+        {
+            return 0;
+        }
     }
 }
