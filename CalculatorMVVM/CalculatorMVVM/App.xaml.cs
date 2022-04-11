@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using CalculatorMVVM.Views;
 
 namespace CalculatorMVVM
 {
@@ -10,7 +11,7 @@ namespace CalculatorMVVM
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new CalculatorPage());
         }
 
         protected override void OnStart()
